@@ -1,16 +1,10 @@
 <?php
 
-require __DIR__ . '/../mycomposer/vendor/autoload.php';
+//require __DIR__ . '/../composer/vendor/autoload.php';
 
 spl_autoload_register(function ($class){
 
-    if(file_exists(__DIR__ . '/controllers/'.$class.'.php')){
-        require __DIR__ . '/controllers/'.$class.'.php';
-    }
-    elseif(file_exists(__DIR__ . '/models/'.$class.'.php')){
-        require __DIR__ . '/models/'.$class.'.php';
-    }
-    elseif(file_exists(__DIR__ . '/classes/'.$class.'.php')){
+    if(file_exists(__DIR__ . '/classes/'.$class.'.php')){
         require __DIR__ . '/classes/'.$class.'.php';
     }
     elseif(file_exists(__DIR__ . '/views/'.$class.'.php')){

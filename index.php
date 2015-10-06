@@ -1,16 +1,5 @@
 <?php header('Content-Type: text/html; charset=utf-8');
 
-/*$content=file_get_contents(__DIR__ .'/test.json');
-$obj=json_decode($content);
-echo $obj->foo;*/
-
-/*$obj=new stdClass;
-$obj->title='Test';
-$obj->text='Длинный текст';
-echo json_encode($obj);
-
-die;*/
-
 require __DIR__ . '/autoload.php';
 
 $path=parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
